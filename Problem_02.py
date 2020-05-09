@@ -37,6 +37,7 @@ In the given list, all of the numbers repeat 5 times except for room number 8.
 Hence, 8 is the Captain's room number.
 
 """
+# importing collections module and using counter function to check number of room and the members in it.
 from collections import Counter
 number_of_members = int(input())
 list_of_rooms = list(map(int, input().split(" ")))
