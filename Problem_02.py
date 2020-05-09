@@ -9,7 +9,8 @@ The tourists consist of:
 
 The Captain was given a separate room, and the rest were given one room per group.
 
-Mr. Anant has an unordered list of randomly arranged room entries. The list consists of the room numbers for all of the tourists.
+Mr. Anant has an unordered list of randomly arranged room entries. The list consists of the room numbers for all of the
+tourists.
 The room numbers will appear K times per group except for the Captain's room.
 
 Mr. Anant needs you to help him find the Captain's room number.
@@ -36,3 +37,10 @@ In the given list, all of the numbers repeat 5 times except for room number 8.
 Hence, 8 is the Captain's room number.
 
 """
+from collections import Counter
+number_of_members = int(input())
+list_of_rooms = list(map(int, input().split(" ")))
+
+member_per_room = Counter(list_of_rooms)
+captain_room = [i for i in member_per_room if member_per_room[i] == 1]
+print(*captain_room)
